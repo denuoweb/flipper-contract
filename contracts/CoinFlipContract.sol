@@ -4,8 +4,8 @@ pragma solidity >=0.4.22 <0.8.0;
 contract CoinFlipContract {
     uint256 public balance;
 
-    constructor() public {
-        balance = 0;
+    constructor() public payable {
+        balance = msg.value;
     }
 
     event betWon();
