@@ -8,6 +8,8 @@ contract CoinFlipContract {
         balance = 0;
     }
 
+    event betWon();
+
     function depositFunds() public payable {
         require(msg.value > 0);
 
@@ -32,8 +34,13 @@ contract CoinFlipContract {
     function makeBet(uint256 coinSide) public payable {
         depositFunds();
 
-        if (coinSide == 1) {
+        if (coinSide == random()) {
             withdraw(msg.value * 2);
+            emit betWon();
         }
+    }
+
+    function random() public view returns (uint256) {
+        return block.timestamp % 2;
     }
 }
