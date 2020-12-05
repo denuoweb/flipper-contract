@@ -16,8 +16,12 @@ contract CoinFlipContract {
         balance += msg.value;
     }
 
-    function getContractBalance() public view returns (uint256) {
+    function getCurrentBalance() public view returns (uint256) {
         return balance;
+    }
+
+    function getContractBalance() public view returns (uint256) {
+        return address(this).balance;
     }
 
     function withdraw(uint256 amount) public payable {
@@ -27,11 +31,13 @@ contract CoinFlipContract {
     }
 
     function withdrawAll() public payable {
+        uint256 toTransfer = balance;
         balance = 0;
-        msg.sender.transfer(address(this).balance);
+        msg.sender.transfer(toTransfer);
     }
 
     function makeBet(uint256 coinSide) public payable {
+        require(coinSide == 0 || coinSide == 1);
         depositFunds();
 
         if (coinSide == random()) {
