@@ -1,1 +1,2 @@
-# Flipper smart contract
+# Flipper 
+Smart contract for Flipper dApp
