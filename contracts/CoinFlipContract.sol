@@ -58,7 +58,7 @@ contract CoinFlipContract {
     }
 
     function makeBet() public payable {
-        require(msg.value < (contractBalance / 4));
+        require(msg.value < (contractBalance / 4)); // Ensure that the bet is less than 25% of the contract balance
         depositFunds();
         if (random() == 1) {
             uint256 payout = msg.value * 2;
@@ -69,7 +69,7 @@ contract CoinFlipContract {
     }
 
     function random() public view returns (uint256) {
-        return block.timestamp % 2;
+        return block.timestamp % 2; // This implementation is not very random, as the result depends on the block timestamp
     }
 
     function isOwner() public view returns (bool) {

@@ -1,0 +1,162 @@
+{
+  "contracts": {
+    "contracts/CoinFlipContract.sol": {
+      "source": "contracts/CoinFlipContract.sol:CoinFlipContract",
+      "abi": [
+        {
+          "name": "",
+          "type": "constructor",
+          "payable": false,
+          "inputs": [],
+          "outputs": null,
+          "constant": false,
+          "anonymous": false
+        },
+        {
+          "name": "betWon",
+          "type": "event",
+          "payable": false,
+          "inputs": [],
+          "outputs": null,
+          "constant": false,
+          "anonymous": false
+        },
+        {
+          "name": "depositFunds",
+          "type": "function",
+          "payable": false,
+          "inputs": [],
+          "outputs": [],
+          "constant": false,
+          "anonymous": false
+        },
+        {
+          "name": "getAvailableContractBalance",
+          "type": "function",
+          "payable": false,
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "constant": false,
+          "anonymous": false
+        },
+        {
+          "name": "getPlayerBalance",
+          "type": "function",
+          "payable": false,
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "constant": false,
+          "anonymous": false
+        },
+        {
+          "name": "getTotalContractBalance",
+          "type": "function",
+          "payable": false,
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "constant": false,
+          "anonymous": false
+        },
+        {
+          "name": "isOwner",
+          "type": "function",
+          "payable": false,
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "bool",
+              "indexed": false
+            }
+          ],
+          "constant": false,
+          "anonymous": false
+        },
+        {
+          "name": "makeBet",
+          "type": "function",
+          "payable": false,
+          "inputs": [],
+          "outputs": [],
+          "constant": false,
+          "anonymous": false
+        },
+        {
+          "name": "random",
+          "type": "function",
+          "payable": false,
+          "inputs": [],
+          "outputs": [
+            {
+              "name": "",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "constant": false,
+          "anonymous": false
+        },
+        {
+          "name": "withdrawContractBalance",
+          "type": "function",
+          "payable": false,
+          "inputs": [
+            {
+              "name": "amount",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "outputs": [],
+          "constant": false,
+          "anonymous": false
+        },
+        {
+          "name": "withdrawPlayerBalance",
+          "type": "function",
+          "payable": false,
+          "inputs": [
+            {
+              "name": "amount",
+              "type": "uint256",
+              "indexed": false
+            }
+          ],
+          "outputs": [],
+          "constant": false,
+          "anonymous": false
+        }
+      ],
+      "bin": "608060405234600155600080546001600160a01b03191633179055610514806100296000396000f3fe6080604052600436106100865760003560e01c8063b5abe85a11610059578063b5abe85a146100fa578063d4e3b6e614610117578063d4f0bcf614610134578063d9e3fd6414610149578063e2c41dbc1461015e57610086565b80630b01517c1461008b578063561e91a1146100b25780635ec01e4d146100bc5780638f32d59b146100d1575b600080fd5b34801561009757600080fd5b506100a0610166565b60408051918252519081900360200190f35b6100ba610179565b005b3480156100c857600080fd5b506100a06101f9565b3480156100dd57600080fd5b506100e6610200565b604080519115158252519081900360200190f35b6100ba6004803603602081101561011057600080fd5b5035610211565b6100ba6004803603602081101561012d57600080fd5b50356102e1565b34801561014057600080fd5b506100a06103ba565b34801561015557600080fd5b506100a06103c0565b6100ba6103c5565b3360009081526002602052604090205490565b60046001548161018557fe5b04341061019157600080fd5b6101996103c5565b6101a16101f9565b600114156101f75733600090815260026020819052604080832080543490930292830190556001805483900390555190917f6eb25d04fefbeac41372bae1e66e14e9e5edbd454e26ca5f030bf006734f219e91a1505b565b6001421690565b6000546001600160a01b0316331490565b6000546001600160a01b0316331461025a5760405162461bcd60e51b81526004018080602001828103825260308152602001806104626030913960400191505060405180910390fd5b60008111801561026c57506001548111155b6102a75760405162461bcd60e51b815260040180806020018281038252604f815260200180610413604f913960600191505060405180910390fd5b600180548290039055604051339082156108fc029083906000818181858888f193505050501580156102dd573d6000803e3d6000fd5b5050565b336000908152600260205260409020548061032d5760405162461bcd60e51b81526004018080602001828103825260368152602001806103dd6036913960400191505060405180910390fd5b60008211801561033d5750808211155b6103785760405162461bcd60e51b815260040180806020018281038252604d815260200180610492604d913960600191505060405180910390fd5b3360008181526002602052604080822085850390555184156108fc0291859190818181858888f193505050501580156103b5573d6000803e3d6000fd5b505050565b60015490565b303190565b600034116103d257600080fd5b600180543401905556fe5769746864726177206465636c696e6564212042616c616e6365206d757374206265206772656174686572207468616e207a65726f2e5769746864726177206465636c696e656421205769746864726177616c20616d6f756e74206d757374206265206265747765656e207a65726f20616e6420636f6e74726163742062616c616e63652e4f6e6c7920636f6e7472616374206f776e65722063616e20776974686472617720636f6e74726163742066756e6473215769746864726177206465636c696e656421205769746864726177616c20616d6f756e74206d757374206265206265747765656e207a65726f20616e6420706c617965722062616c616e63652ea264697066735822122018347a784e6648bf114ca95a184c981889d38816667366431441f9b02fe91ee764736f6c63430007060033",
+      "binhash": "eb430f0c68a70cedfdd33fff188dfcd8f5c04b27ef378ef4264b917604581f7b",
+      "name": "CoinFlipContract",
+      "deployName": "contracts/CoinFlipContract.sol",
+      "address": "f3c4ca863caa54320487d32a7607c2a866cfb2eb",
+      "txid": "4b09aff73c0e7cdf8397cbacbfe64f5aab035d5a030637d5f82db042499b5ca0",
+      "createdAt": "2022-12-14T06:25:09.74167971-08:00",
+      "confirmed": true,
+      "sender": "HbeibR3ASCGNP2pDFdvbSf5k7YeHQqmsim",
+      "senderHex": "3f8b1d6e2b65c468d041d8400a52e1317be4ea41"
+    }
+  },
+  "libraries": {},
+  "related": {}
+}
